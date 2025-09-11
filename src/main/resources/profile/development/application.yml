@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/event_ticketdb
+    username: ticket_user
+    password: password123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        enable_lazy_load_no_trans: true
+        database: postgresql
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+  profiles:
+    active: development
+app:
+    upload-directory: ticket-uploads
+    folder-temp: ./ticket-temp/
