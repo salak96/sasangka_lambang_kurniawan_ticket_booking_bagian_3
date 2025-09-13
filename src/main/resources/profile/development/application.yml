@@ -21,3 +21,14 @@ spring:
 app:
     upload-directory: ticket-uploads
     folder-temp: ./ticket-temp/
+security:
+  jwt:
+    issuer: event-booking
+    secret: change-me-change-me-change-me-32bytes!   # minimal 32 byte
+    access-token-ttl-minutes: 60
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    path: /v3/api-docs
+
